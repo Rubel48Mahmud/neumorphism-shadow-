@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Shadow Practice</title>
+<style type="text/css">
+*{margin:0;
+padding:0;
+box-sizing:border-box}
+body{background:#ecf0f3;
+width:100%;
+height:100%}
+
+.main{width:200px;
+height:290px;
+background:  #ecf0f3;;
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+box-shadow: 6px 6px 5px #cbced1,
+              -6px -6px 5px #ffffff;
+border-radius:12px}
+
+.display-div{width:100%;
+height:40px;
+
+}
+.scr{width:180px;
+height:100%;
+border-radius:5px;
+background:#fff;
+outline:none;
+color:#708090;
+text-shadow:1px 1px #000;
+font-weight:bold;
+font-size:24px;
+padding:4px 15px;
+text-align:right;
+border:none;
+margin-left:10px;
+margin-top:8px;
+box-shadow: 3px 3px 4px #cbced1 inset,
+              -3px -3px 4px #cbced1 inset;}
+
+
+::-webkit-input-placeholder{
+padding:10px 20px;
+font-size:10px;
+color:blue;
+opacity:0.5}
+
+.btn-div{width:100%;
+height:250px;
+background :;
+position:absolute;
+text-align:center
+}
+
+.btn-clss{
+margin-top:13px;
+width:40px;
+height:36px;
+border-radius:50%;
+outline:none;
+border:none;
+font-weight:bold;
+font-size:18px;
+background:#fff;
+box-shadow: 3px 3px 1px #cbced1;
+cursor: pointer;
+transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s; 
+}
+
+.btn-clss:after{content: "";
+  background: #fff;
+  transition:all 0.4s}
+  
+.btn:active:after{opacity:1;
+  transition:2s;
+  border-radius:50%}
+  
+
+.equal{width:80px;
+height:36px;
+border-radius:12px;
+outline:none;
+border:none;
+font-weight:bold;
+font-size:28px;
+background:#fff;
+box-shadow: 3px 3px 1px #cbced1;
+}
+
+.red{background:red;
+color:#fff}
+.orange{background:orange;
+color:#fff}
+.green{background:green;
+color:#fff;}
+
+</style>
+</head>
+<body>
+  <div class="main">
+    <form name="mobile">
+      <div class="display-div">
+        <input type="text" class="scr" name="screen" placeholder="Created By Rubel Mahmud" disabled>
+      </div>
+    
+    <div class="btn-div">
+      <input type="button" Class="btn-clss red" value="AC" onclick="mobile.screen.value=''">
+      <input type="button" Class="btn-clss orange" value="<" onclick="mobile.screen.value=mobile.screen.value.slice(0,-1)">
+      <input type="button" Class="btn-clss orange" value="√" onclick="mobile.screen.value=Math.sqrt(mobile.screen.value)">
+      <input type="button" Class="btn-clss orange" value="÷" onclick="mobile.screen.value+='/'">
+      <br>
+      <input type="button" Class="btn-clss" value="7" onclick="mobile.screen.value+='7'">
+      <input type="button" Class="btn-clss" value="8" onclick="mobile.screen.value+='8'">
+      <input type="button" Class="btn-clss" value="9" onclick="mobile.screen.value+='9'">
+      <input type="button" Class="btn-clss orange" value="+" onclick="mobile.screen.value+='+'">
+      <br>
+      <input type="button" Class="btn-clss" value="4" onclick="mobile.screen.value+='4'">
+      <input type="button" Class="btn-clss" value="5" onclick="mobile.screen.value+='5'">
+      <input type="button" Class="btn-clss" value="6" onclick="mobile.screen.value+='6'">
+      <input type="button" Class="btn-clss orange" value="-" onclick="mobile.screen.value+='-'">
+      <br>
+      <input type="button" Class="btn-clss" value="1" onclick="mobile.screen.value+='1'">
+      <input type="button" Class="btn-clss" value="2" onclick="mobile.screen.value+='2'">
+      <input type="button" Class="btn-clss" value="3" onclick="mobile.screen.value+='3'">
+      <input type="button" Class="btn-clss orange" value="×" onclick="mobile.screen.value+='*'">
+      <br>
+      <input type="button" Class="btn-clss" value="0" onclick="mobile.screen.value+='0'">
+      <input type="button" Class="btn-clss" value="." onclick="mobile.screen.value+='.'">
+      <input type="button" class="equal green" value="=" onclick="mobile.screen.value=eval(mobile.screen.value)">
+    </div>
+   </form>
+  </div>
+</body>
+</html>
